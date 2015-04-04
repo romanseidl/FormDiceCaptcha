@@ -1,0 +1,102 @@
+<?php
+/**
+ * Dice Captcha
+ * 
+ * @copyright 2015, Roman Seidl
+ * Licensed under GNU/GPL v3, see LICENSE.TXT
+ *
+ */
+
+
+class DiceCaptcha extends WireData implements Module {
+  public static function getModuleInfo() {
+    return array(
+      'title' => 'Dice Captcha',
+      'summary' => 'Creates a dice captcha',
+      'singular' => true,
+      'autoload' => true,
+      'version' => 1
+    );
+  }
+
+
+
+  private $captchadir;
+
+  const CAPTCHA_DIR = "captcha/";
+  const CAPTCHA_KEY = "dice_captcha";
+  const NUM_DICES = 3;
+  const DICE_SIZE = 50;
+
+  public function init() {
+	$this->$captchadir = $this->config->paths->assets . self::CAPTCHA_DIR;
+	if(!is_dir ($this->$captchadir)) {
+		mkdir($this->$captchadir, 0770);
+	} else {
+	   //delete old files
+	   $files = glob($this->$captchadir."/*");
+  	   $now   = time();
+	   foreach ($files as $file)
+	       if (is_file($file))
+	         if ($now - filemtime($file) >= 60*2) // 2 Minutes
+			unlink($file);
+
+	}
+  }
+
+  
+  public function captcha() {
+
+    $images = array();
+    for ($i=1; $i <= 6; $i++) {
+	$imgfile = $this->config->paths->siteModules."DiceCaptcha/" . $i . ".jpg";
+	$images[$i] = imagecreatefromjpeg($imgfile);
+    }
+
+    $canvas_image = imagecreatetruecolor(self::NUM_DICES*self::DICE_SIZE, self::DICE_SIZE);
+
+    $current_x = 0;
+
+    $sum = 0;
+    for ($i=0; $i < self::NUM_DICES; $i++) {
+	$dice = rand (1,6);
+	
+	$sum += $dice;
+
+        imagecopy(
+            $canvas_image,  // destination image
+            $images[$dice],    // source image
+            $current_x,              // x co-ordinate of destination
+            0,     // y co-ordinate of destination
+            0,              // x co-ordinate of source
+            0,              // y co-ordinate of source
+            self::DICE_SIZE,     // source img width
+            self::DICE_SIZE     // source img height
+        );
+
+        $current_x = $current_x + self::DICE_SIZE;
+    }
+
+    $filename = tempnam($this->$captchadir,"c");
+    unlink($filename);
+    $filename .= ".jpg";
+    $captcha = imagejpeg($canvas_image, $filename);
+
+    imagedestroy($canvas_image);
+    for ($i=1; $i <= 6; $i++) {
+	imagedestroy($images[$i]);
+    }
+
+    $this->session->set(self::CAPTCHA_KEY, $sum);
+
+    return $this->config->urls->assets.self::CAPTCHA_DIR.basename($filename);
+  }
+
+  public function validate($number)
+  {
+	return $number == $this->session->get(self::CAPTCHA_KEY);
+  }
+
+}
+
+?>
