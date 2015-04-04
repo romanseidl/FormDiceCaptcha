@@ -3,13 +3,15 @@ Processwire Dice Captcha Module
 
 This is a simple Processwire Module.
 
-@copyright 2015, Roman Seidl
+@copyright 2015, Roman Seidl  
 Licensed under GNU Lesser General Public License, Version 3, see LICENSE.TXT
 
 ![1](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/1.jpg) ![2](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/2.jpg) ![3](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/3.jpg) ![4](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/4.jpg) ![5](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/5.jpg) ![6](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/6.jpg)
 
-If you want you can change the jpg files and adapt the size setting in the module accordingly. This should also increase security as if you use more complex images they will be harder to recognize.
+If you want you can change the jpg files and adapt the size setting in the module accordingly. This should also increase security as if you use more complex images they will be harder to recognize. 
 You can als change the number of dices asked for.
+
+You are be able to change the image size and the number of dices in the module config interface.
 
 Usage:
 
