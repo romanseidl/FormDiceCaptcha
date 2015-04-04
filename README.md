@@ -4,7 +4,7 @@ Processwire Dice Captcha Module
 This is a simple Processwire Module.
 
 @copyright 2015, Roman Seidl
-Licensed under GNU/GPL v3, see LICENSE.TXT
+Licensed under GNU General Public License, Version 3, see LICENSE.TXT
 
 ![1](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/1.jpg) ![2](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/2.jpg) ![3](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/3.jpg) ![4](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/4.jpg) ![5](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/5.jpg) ![6](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/6.jpg)
 
