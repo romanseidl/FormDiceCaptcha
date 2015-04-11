@@ -40,7 +40,7 @@ class DiceCaptcha extends WireData implements Module, ConfigurableModule
     {
         $this->$captchadir = $this->config->paths->assets . self::CAPTCHA_DIR;
         if (!is_dir($this->$captchadir)) {
-            mkdir($this->$captchadir, octdec(wire('config')->chmodDir));
+            wireMkdir($this->$captchadir);
         } else {
             //delete old files
             $files = glob($this->$captchadir . "/*");
