@@ -38,12 +38,12 @@ class DiceCaptcha extends WireData implements Module, ConfigurableModule
     
     public function init()
     {
-        $this->$captchadir = $this->config->paths->assets . self::CAPTCHA_DIR;
-        if (!is_dir($this->$captchadir)) {
-            wireMkdir($this->$captchadir);
+        $this->captchadir = $this->config->paths->assets . self::CAPTCHA_DIR;
+        if (!is_dir($this->captchadir)) {
+            wireMkdir($this->captchadir);
         } else {
             //delete old files
-            $files = glob($this->$captchadir . "/*");
+            $files = glob($this->captchadir . "/*");
             $now   = time();
             foreach ($files as $file)
                 if (is_file($file))
@@ -90,7 +90,7 @@ class DiceCaptcha extends WireData implements Module, ConfigurableModule
             $current_x = $current_x + $dice_size;
         }
         
-        $filename = tempnam($this->$captchadir, "c");
+        $filename = tempnam($this->captchadir, "c");
         unlink($filename);
         $filename .= ".jpg";
         $captcha = imagejpeg($canvas_image, $filename);
@@ -145,4 +145,3 @@ class DiceCaptcha extends WireData implements Module, ConfigurableModule
         return $inputfields;
     }
 }
-
