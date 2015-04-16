@@ -15,7 +15,7 @@ The shown dice are a temporary image that gets constructed on a first call. The 
  
     <?php
     //Init Module
-    $dice = $modules->get("DiceCaptcha"); 
+    $dice = $modules->get("FormDiceCaptcha"); 
     
     //On submit check if the validation is correct
     if($input->post->submit) {
