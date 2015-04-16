@@ -8,7 +8,7 @@ Licensed under GNU Lesser General Public License, Version 3, see LICENSE.TXT
 
 ![1](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/1.jpg) ![2](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/2.jpg) ![3](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/3.jpg) ![4](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/4.jpg) ![5](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/5.jpg) ![6](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/6.jpg)
 
-This module allows you to ask a simple captcha question based on images of dice (6 sided). This could look as follows:
+This module allows you to ask a simple captcha question based on images of dice (6 sided). This could look as follows:  
 ![screenshot](https://raw.githubusercontent.com/romanseidl/dice-captcha/readme/screen.png)
 
 The shown dice are a temporary image that gets constructed on a first call. The correct answer is stored to the session. Just add a an image pointing to $dice->captcha() to your form and check the input by using $dice->validate() after submit:
