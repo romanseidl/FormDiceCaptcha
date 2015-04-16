@@ -47,5 +47,5 @@ If you want you can change the jpg files and adapt the size setting in the modul
 
 In case you want a pretty interface you could take pictures of real dice. If you want to try this I recommend you to take 6 dice and place them in a row against a white background. Then use some light source not too hard and not too close from the upper left (nw) corner (could be sunlight if you wait for the right time of the day) and take a picture. Don't use a wide angle lens as it will lead to inconsistencies between the dice. Then take this single image adjust color and contrast and cut out the dice into square images of the same size.
 
-The result can look as follows:  
+The result can look like this:  
 ![dice](https://raw.githubusercontent.com/romanseidl/dice-captcha/readme/dice.png)
