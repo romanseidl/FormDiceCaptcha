@@ -130,7 +130,7 @@ class FormDiceCaptcha extends WireData implements Module, ConfigurableModule
         $f              = $modules->get('InputfieldText');
         $f->name        = "num_dices";
         $f->label       = __("num_dices");
-        $f->description = __("The number of dices shown.");
+        $f->description = __("The number of dice shown.");
         $f->value       = $data["num_dices"];
         $fieldset->append($f);
         
