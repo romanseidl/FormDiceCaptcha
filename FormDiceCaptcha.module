@@ -8,7 +8,7 @@
  */
 
 
-class DiceCaptcha extends WireData implements Module, ConfigurableModule
+class FormDiceCaptcha extends WireData implements Module, ConfigurableModule
 {
     public static function getModuleInfo()
     {
