@@ -20,7 +20,7 @@ The shown dice are a temporary image that gets constructed on a first call. The 
     <form method="post" action="./">
       <!--Show captcha -->
       <img src="$dice->captcha()"/>
-      How much is the sum of the dices?
+      How much is the sum of the dice?
       <!--ask for sum -->
       <input type="text" name="captcha" value="$form[captcha]"/>
       <input type="submit" name="submit" value="submit">
@@ -41,7 +41,7 @@ Validation is then done by checking against he stored value:
           echo "Success!";
     }
 
-You are be able to change the image size and the number of dices in the module config interface.
+You are be able to change the image size and the number of dice in the module config interface.
 
 If you want you can change the jpg files and adapt the size setting in the module accordingly. This should also increase security as if you use more complex images they will be harder to recognize. 
 
