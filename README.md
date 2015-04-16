@@ -11,22 +11,7 @@ Licensed under GNU Lesser General Public License, Version 3, see LICENSE.TXT
 This module allows you to ask a simple captcha question based on images of dice (6 sided). This could look as follows:
 ![screenshot](https://raw.githubusercontent.com/romanseidl/dice-captcha/readme/screen.png)
 
-The shown dice are a temporary image that gets constructed on a first call. The correct answer is stored to the session. Constructing the form is done as follows:
- 
-    <?php
-    //Init Module
-    $dice = $modules->get("DiceCaptcha"); 
-    
-    <form method="post" action="./">
-      <!--Show captcha -->
-      <img src="$dice->captcha()"/>
-      How much is the sum of the dice?
-      <!--ask for sum -->
-      <input type="text" name="captcha" value="$form[captcha]"/>
-      <input type="submit" name="submit" value="submit">
-    </form>
-
-Validation is then done by checking against he stored value:
+The shown dice are a temporary image that gets constructed on a first call. The correct answer is stored to the session. Just add a <img src="$dice->captcha()"/> to your form and check the input by using $dice->validate() after submit:
  
     <?php
     //Init Module
@@ -40,6 +25,17 @@ Validation is then done by checking against he stored value:
         else
           echo "Success!";
     }
+    
+    <form method="post" action="./">
+      <!--Show captcha -->
+      <img src="$dice->captcha()"/>
+      How much is the sum of the dice?
+      <!--ask for sum -->
+      <input type="text" name="captcha" value="$form[captcha]"/>
+      <input type="submit" name="submit" value="submit">
+    </form>
+
+ 
 
 You are be able to change the image size and the number of dice in the module config interface.
 
