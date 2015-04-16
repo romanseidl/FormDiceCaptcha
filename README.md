@@ -6,7 +6,7 @@ This is a simple Processwire Module.
 @copyright 2015, Roman Seidl  
 Licensed under GNU Lesser General Public License, Version 3, see LICENSE.TXT
 
-![1](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/1.jpg) ![2](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/2.jpg) ![3](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/3.jpg) ![4](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/4.jpg) ![5](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/5.jpg) ![6](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/DiceCaptcha/6.jpg)
+![1](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/1.jpg) ![2](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/2.jpg) ![3](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/3.jpg) ![4](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/4.jpg) ![5](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/5.jpg) ![6](https://raw.githubusercontent.com/romanseidl/dice-captcha/master/6.jpg)
 
 This module allows you to ask a simple captcha question based on images of dice (6 sided). This could look as follows:
 ![screenshot](https://raw.githubusercontent.com/romanseidl/dice-captcha/readme/screen.png)
