@@ -137,7 +137,7 @@ class FormDiceCaptcha extends WireData implements Module, ConfigurableModule
         $f              = $modules->get('InputfieldText');
         $f->name        = "dice_size";
         $f->label       = __("dice_size");
-        $f->description = __("Dice image size in pixels. Dices must be square images.");
+        $f->description = __("Dice image size in pixels. Dice must must be square images.");
         $f->value       = $data["dice_size"];
         $fieldset->append($f);
         
