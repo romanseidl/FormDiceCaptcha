@@ -59,7 +59,7 @@ class FormDiceCaptcha extends WireData implements Module, ConfigurableModule
         
         $images = array();
         for ($i = 1; $i <= 6; $i++) {
-            $imgfile    = $this->config->paths->siteModules . "DiceCaptcha/" . $i . ".jpg";
+            $imgfile    = dirname(__FILE__) ."/". $i . ".jpg";
             $images[$i] = imagecreatefromjpeg($imgfile);
         }
         
