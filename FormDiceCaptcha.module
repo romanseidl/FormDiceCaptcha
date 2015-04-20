@@ -17,7 +17,7 @@ class FormDiceCaptcha extends WireData implements Module, ConfigurableModule
             'summary' => 'Creates a dice captcha',
             'singular' => true,
             'autoload' => true,
-	    'version' => 11
+	    'version' => 12
         );
     }
     
