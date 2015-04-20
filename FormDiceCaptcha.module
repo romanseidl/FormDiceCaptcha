@@ -65,7 +65,6 @@ class FormDiceCaptcha extends WireData implements Module, ConfigurableModule
         
         $dice_size = $this->data['dice_size'];
         $num_dices = $this->data['num_dices'];
-        echo "dice" . $num_dices;
         
         $canvas_image = imagecreatetruecolor($num_dices * $dice_size, $dice_size);
         
